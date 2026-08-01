@@ -156,8 +156,11 @@ npx google-connect verify
 ### Install
 
 ```bash
-npm install github:YOUR_GITHUB_USERNAME/google-connect
+npm install git+https://github.com/dandrucker/google-connect.git
 ```
+
+Use the explicit `git+https://` form rather than the `github:` shorthand. Both
+work locally, but the https form is unambiguous in CI where no SSH key exists.
 
 The package builds itself on install, so no separate build step is needed.
 
