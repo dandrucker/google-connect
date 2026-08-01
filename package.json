@@ -1,0 +1,38 @@
+{
+  "name": "google-connect",
+  "version": "1.0.0",
+  "description": "Headless Google API client (Sheets, Calendar, Tasks, Gmail) authenticated by a long-lived refresh token. Reusable across projects.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "google-connect": "dist/bin/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "authorize": "npm run build && node dist/bin/cli.js authorize"
+  },
+  "keywords": [
+    "google",
+    "sheets",
+    "calendar",
+    "tasks",
+    "gmail",
+    "oauth"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "googleapis": "^144.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
